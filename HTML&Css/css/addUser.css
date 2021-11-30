@@ -1,0 +1,181 @@
+.title {
+    position: absolute;
+    top: 32px;
+    left: 48px
+}
+.btn-cancel {
+    position: absolute;
+    top: 44px;
+    left: 800px;
+    width: 136px;
+    height: 40px;
+    border: 1px solid #00338D;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.btn-save {
+    position: absolute;
+    top: 44px;
+    right: 48px;
+    width: 136px;
+    height: 40px;
+    border-radius: 4px;
+    background-color:#00A3A1;
+    border: none;
+}
+.title-info {
+    position: absolute;
+    left: 48px;
+    top: 143px;
+}
+.form-email {
+    position: absolute;
+    left: 48px;
+    top: 191px;
+    width: 736px;
+}
+.form-email input {
+    width: 100%;
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+}
+.user-role {
+    position: absolute;
+    left: 48px;
+    top: 291px;
+    width: 300px;
+}
+.user-role .dropdown {
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px 0 12px;
+}
+.user-role .dropdown input {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+.title-name {
+    position: absolute;
+    top: 393px;
+    left: 48px;
+}
+.JP-name {
+    position: absolute;
+    top: 441px;
+    left: 48px;
+}
+.JP-name input {
+    width: 100%;
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+}
+.EN-name {
+    position: absolute;
+    top: 541px;
+    left: 48px;
+}
+.EN-name input {
+    width: 100%;
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+}
+.title-engagement {
+    position: absolute;
+    top: 649px;
+    left: 48px;
+}
+.form-engagement {
+    position: absolute;
+    top: 697px;
+    left: 48px;
+    width: 736px;
+}
+.form-engagement .dropdown {
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 14px 0 12px;
+}
+.form-engagement .dropdown input {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+.company-JP{
+    position: absolute;
+    top: 805px;
+    left: 48px;
+}
+.company-EN{
+    position: absolute;
+    top: 905px;
+    left: 48px;
+}
+.dep-JP {
+    position: absolute;
+    top: 997px;
+    left: 48px;
+    width: 736px;
+}
+.dep-JP input {
+    width: 100%;
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+}
+.dep-EN {
+    position: absolute;
+    top: 1097px;
+    left: 48px;
+    width: 736px;
+}
+.dep-EN input {
+    width: 100%;
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+}
+.btn-cancel-b {
+    position: absolute;
+    bottom: 48px;
+    left: 800px;
+    width: 136px;
+    height: 40px;
+    border: 1px solid #00338D;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.btn-save-b {
+    position: absolute;
+    bottom: 48px;
+    right: 48px;
+    width: 136px;
+    height: 40px;
+    border-radius: 4px;
+    background-color:#00A3A1;
+    border: none;
+}
+.d-flex {
+    display: flex;
+}
+.w-360 {
+    width: 360px;
+}

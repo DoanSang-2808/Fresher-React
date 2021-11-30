@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/addUser.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="header">
+      <p class="header-content">KPMG CSR Survey</p>
+      <i class="fas fa-bars icon-bar color-primary"></i>
+    </div>
+    <hr />
+    <div class="main mx-24">
+      <div class="section">
+        <div class="h-40">
+          <i class="fas fa-home color-white ml-34 mr-10"></i>
+          <div class="color-white font-s-14 font-w-400 line-h-21">Home</div>
+        </div>
+      </div>
+      <hr />
+      <div class="section">
+        <div class="h-40">
+          <i class="fas fa-list color-white ml-34 mr-10"></i>
+          <div class="color-white font-s-14 font-w-400 line-h-21">Survey Admin</div>
+        </div>
+        <div class="h-40">
+          <i class="fas fa-store-alt color-white ml-34 mr-10"></i>
+          <div class="color-white font-s-14 font-w-400 line-h-21">Supplier Info</div>
+        </div>
+      </div>
+      <hr />
+      <div class="section">
+        <div class="h-40">
+          <i class="far fa-building color-white ml-34 mr-10"></i>
+          <div class="color-white font-s-14 font-w-400 line-h-21">Engagement Info</div>
+        </div>
+        <div class="h-40">
+          <i class="fas fa-user-friends color-white ml-34 mr-10"></i>
+          <div class="color-white font-s-14 font-w-400 line-h-21">User Management</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="header">
+      <i class="fas fa-chevron-down ml-18"></i>
+      <p class="font-s-14 font-w-400 line-h-21">firstname.lastname@jp.kpmg.com</p>
+    </div>
+    <div class="container">
+      <div class="top">
+        <i class="fas fa-user-friends color-primary mr-5"></i>
+        <p class="color-primary ma-0 font-w-400 font-s-12 line-h-18">User management</p>
+        <p class="color-mono ma-0 mx-14 font-w-400 font-s-12 line-h-18">/</p>
+        <p class="color-mono ma-0 font-w-400 font-s-12 line-h-18">Add user</p>
+      </div>
+      <div class="content">
+        <div>
+          <h1 class="font-w-300 font-s-48 line-h-62 title ma-0">Add user</h1>
+          <button class="btn-cancel">
+            <p class="color-primary ma-0 font-s-14 font-w-600 line-h-18">Cancel</p>
+          </button>
+          <button class="btn-save">
+            <p class="color-white ma-0 font-s-14 font-w-600 line-h-18">Save</p>
+          </button>
+        </div>
+        <p class="title-info ma-0 font-w-600 font-s-24">General Information</p>
+        <div class="form-email">
+          <label for="email" class="font-s-12 font-w-400 line-h-18 mb-4">Email *</label>
+          <input type="text" name="email" class="h-40">
+        </div>
+        <div class="user-role">
+          <label for="role" class="font-s-12 font-w-400 line-h-18 mb-4">User role *</label>
+          <div class="dropdown h-40">
+            <input type="text" name="role" value="Client Admin User">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <p class="title-name ma-0 font-w-600 font-s-24">Name</p>
+        <div class="JP-name">
+          <div class="d-flex">
+            <div class="last-name w-360 mr-16 h-40">
+              <label for="lastNameJP" class="font-s-12 font-w-400 line-h-18 mb-4">LastName (Japanese)</label>
+              <input type="text" name="lastNameJP" class="h-40">
+            </div>
+            <div class="first-name w-360">
+              <label for="firstNameJP" class="font-s-12 font-w-400 line-h-18 mb-4">FirstName (Japanese)</label>
+              <input type="text" name="firstNameJP" class="h-40">
+            </div>
+          </div>
+        </div>
+        <div class="EN-name">
+          <div class="d-flex">
+            <div class="last-name w-360 mr-16 h-40">
+              <label for="lastNameEN" class="font-s-12 font-w-400 line-h-18 mb-4">LastName (English)</label>
+              <input type="text" name="lastNameEN" class="h-40">
+            </div>
+            <div class="first-name w-360">
+              <label for="firstNameEN" class="font-s-12 font-w-400 line-h-18 mb-4">FirstName (English)</label>
+              <input type="text" name="firstNameEN" class="h-40">
+            </div>
+          </div>
+        </div>
+        <p class="title-engagement ma-0 font-w-600 font-s-24">Engagement information</p>
+        <div class="form-engagement">
+          <label for="engagementCode" class="font-s-12 font-w-400 line-h-18 mb-4">Engagement code *</label>
+          <div class="dropdown h-40">
+            <input type="text" name="engagementCode" value="Select engagement code - company name">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <p class="color-mono ma-0 font-s-12 font-w-400 line-h-18" style="position: absolute; top: 762px; left: 48px">If
+          engagement code cannot be found, please register engagement in Engagement Info first.</p>
+        <div class="company-JP">
+          <p class="color-mono ma-0 font-s-12 font-w-400 line-h-18 mb-4">Company name (Japanese)</p>
+          <p class="ma-0 font-s-16 font-w-400 line-h-24">-</p>
+        </div>
+        <div class="company-EN">
+          <p class="color-mono ma-0 font-s-12 font-w-400 line-h-18 mb-4">Company name (Emglish)</p>
+          <p class="ma-0 font-s-16 font-w-400 line-h-24">-</p>
+        </div>
+        <div class="dep-JP">
+          <label for="depJP" class="font-s-12 font-w-400 line-h-18 mb-4">Department (Japanese)</label>
+          <input type="text" name="depJP" class="h-40">
+        </div>
+        <div class="dep-EN">
+          <label for="depEN" class="font-s-12 font-w-400 line-h-18 mb-4">Department (English)</label>
+          <input type="text" name="depEN" class="h-40">
+        </div>
+        <div>
+          <button class="btn-cancel-b">
+            <p class="color-primary ma-0 font-s-14 font-w-600 line-h-18">Cancel</p>
+          </button>
+          <button class="btn-save-b">
+            <p class="color-white ma-0 font-s-14 font-w-600 line-h-18">Save</p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
