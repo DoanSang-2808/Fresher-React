@@ -1,0 +1,56 @@
+.list-user-wrapper {
+    padding: 13px 32px 32px;
+    height: calc(100% - 45px);
+}
+.list-user-wrapper .title {
+    height: 30px;
+    margin-bottom: 13px;
+    display: flex;
+    align-items: center;
+}
+.list-user-wrapper .list-user {
+    width: 100%;
+    height: calc(100% - 45px);
+    background-color: #fff;
+    border-radius: 8px;
+}
+.list-user-wrapper .list-user .main-list-user {
+    padding: 32px 48px 58px;
+}
+.list-user-wrapper .list-user .main-list-user .paging-wrapper {
+    margin-top: 24px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.paging-wrapper .option-record {
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 80px;
+    margin-right: 32px;
+}
+.paging-wrapper .total-record {
+    width: 120px;
+    height: 100%;
+}
+.btn-first, .btn-pre, .btn-next, .btn-last {
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 48px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-first {
+    margin: 0 16px;
+}
+.btn-last {
+    margin: 0 0 0 16px;
+}
+.btn-pre {
+    margin-right: 4px;
+}

@@ -1,0 +1,24 @@
+table {
+    width: 100%;
+}
+th {
+    /* width: 200px !important; */
+    height: 55px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.04) !important;
+}
+th,tr, td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+tr {
+    height: 72px;
+}
+p {
+    word-wrap: break-word;
+}
+.width-200 {
+    width: 200px !important;
+}
+.width-80 {
+    width: 80px !important;
+}

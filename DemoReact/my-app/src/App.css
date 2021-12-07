@@ -1,0 +1,177 @@
+.App {
+  width: 1440px;
+  height: 1257px;
+  display: flex;
+}
+.side-bar {
+  width: 240px;
+  height: 100%;
+  background-color: rgba(0, 51, 141, 1);
+}
+.main {
+  width: calc(100% - 240px);
+  height: 100%;
+}
+.header {
+  width: 100%;
+  height: 64px;
+  border-bottom:  1px solid #000 ;
+
+}
+.contain {
+  width: 100%;
+  height: calc(100% - 65px);
+  background-color: rgba(240, 240, 240, 1);
+}
+
+.color-black {
+  color: rgba(0, 0, 0, 1);
+}
+.color-grey {
+  color: rgba(118, 118, 118, 1);
+}
+.color-primary {
+  color: rgba(0, 94, 184, 1);
+}
+.color-white {
+  color: #fff;
+}
+.d-flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.row-r {
+  flex-direction: row-reverse;
+}
+.font-s-48 {
+  font-size: 48px;
+}
+.font-s-24 {
+  font-size: 24px;
+}
+.font-s-18 {
+  font-size: 18px;
+}
+.font-s-14 {
+  font-size: 14px;
+}
+.font-s-12 {
+  font-size: 12px;
+}
+.font-w-300 {
+  font-weight: 300;
+ }
+.font-w-400 {
+ font-weight: 400;
+}
+.font-w-600 {
+  font-weight: 600;
+ }
+.height-f {
+  height: 100%;
+}
+.height-40 {
+  height: 40px;
+}
+.line-h-62 {
+  line-height: 62px;
+}
+.line-h-21 {
+  line-height: 21px;
+}
+.line-h-18 {
+  line-height: 18px;
+}
+.ma-0 {
+  margin: 0;
+}
+.mb-8 {
+  margin-bottom: 8px;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
+.mb-48 {
+  margin-bottom: 48px;
+}
+.ml-8 {
+  margin-left: 8px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+.ml-12 {
+  margin-left: 12px;
+}
+.ml-14 {
+  margin-left: 14px;
+}
+.ml-16 {
+  margin-left: 16px;
+}
+.ml-18 {
+  margin-left: 18px;
+}
+.ml-24 {
+  margin-left: 24px;
+}
+.mt-24 {
+  margin-top: 24px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.mr-16 {
+  margin-right: 16px;
+}
+.mr-24 {
+  margin-right: 24px;
+}
+.mr-27 {
+  margin-right: 27px;
+}
+.pl-16 {
+  padding-left: 16px;
+}
+.width-f {
+  width: 100%;
+}
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
