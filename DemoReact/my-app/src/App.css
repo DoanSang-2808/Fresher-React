@@ -1,7 +1,16 @@
 .App {
-  width: 1440px;
+  width: 100vw;
   height: 1257px;
   display: flex;
+}
+.show-sidebar {
+  position: fixed;
+  background-color: rgba(0, 51, 141, 1);
+  top: 10px;
+  left: 32px;
+  opacity: 0;
+  border-radius: 10px;
+  padding: 10px 16px;
 }
 .side-bar {
   width: 240px;

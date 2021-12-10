@@ -22,3 +22,10 @@ p {
 .width-80 {
     width: 80px !important;
 }
+.icon-sort {
+    opacity: 0.5;
+}
+.btn-edit:hover {
+    font-size: 24px;
+    color: rgba(0, 51, 141, 1);
+}
