@@ -1,0 +1,12 @@
+.add-user {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 8px; 
+}
+.add-user .main-add-user {
+    padding: 32px 48px 58px;
+}
+.add-user .main-add-user .header-add-user {
+
+}
