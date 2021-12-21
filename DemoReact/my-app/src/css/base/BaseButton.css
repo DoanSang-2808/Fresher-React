@@ -9,5 +9,6 @@
     /* padding: 0 4px; */
 }
 .button-wrapper:hover {
-    background-color:rgba(0, 51, 141, 0.9)
+    background-color:rgba(0, 51, 141, 0.9);
+    cursor: pointer;
 }

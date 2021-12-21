@@ -28,4 +28,5 @@ p {
 .btn-edit:hover {
     font-size: 24px;
     color: rgba(0, 51, 141, 1);
+    cursor: pointer;
 }

@@ -15,4 +15,5 @@
 }
 .side-bar-item:hover {
     text-decoration-line: underline ;
+    cursor: pointer;
 }

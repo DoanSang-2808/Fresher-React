@@ -1,11 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import '../../../css/pages/AddUser.css';
-import BaseInput from '../../base/BaseInput';
-import BaseButton from '../../base/BaseButton';
-import { Link } from 'react-router-dom';
+import '../../css/pages/AddUser.css';
+import BaseInput from '../base/BaseInput';
+import BaseButton from '../base/BaseButton';
+import { useNavigate } from 'react-router-dom';
 
+function AddUser(props : any) {
+    const [user, setUser] = useState({phone: "0396546258", website:"luna.dev.com"})
+    const history = useNavigate();
 
-function AddUsers() {
+    const changeInput = (inputData: any, nameField: any) => {
+        const obj :any  = user;
+        obj[`${nameField}`] = inputData;
+        setUser(obj);
+    }
+    const backUserManagement = () => {
+        history(-1);
+    }
+    const addUser = () => {
+        // if(Object.keys(user).length > 2) {
+            props.newUser(user);
+        // }
+        history('/users');
+    }
 
     return (
         <div className="add-user">
@@ -13,14 +29,14 @@ function AddUsers() {
                 <div className="header-add-user d-flex justify-between align-center">
                     <h1 className="ma-0 font-s-48 font-w-300 line-h-62 mb-24">Add User</h1>
                     <div className='d-flex'>
-                        <Link to="/users" className='text-d-none'><BaseButton nameBtn="Cancel" width="136px" border="#00338D" background="#fff" color="#005EB8" /></Link>
-                        <BaseButton nameBtn="Save" width="136px" background="#00A3A1" color="#fff" />
+                        <BaseButton nameBtn="Cancel" width="136px" border="#00338D" background="#fff" color="#005EB8" btnOnClick={backUserManagement} />
+                        <BaseButton nameBtn="Save" width="136px" background="#00A3A1" color="#fff" btnOnClick={addUser}  />
                     </div>
                 </div>
                 <p className="ma-0 font-w-600 font-s-24" style={{ margin: "0 0 20px" }}>General Information</p>
                 <div style={{ margin: "0 0 35px" }} >
                     <label className="font-s-12 font-w-400 line-h-18 mb-4">Email *</label>
-                    <BaseInput width="736px" />
+                    <BaseInput width="736px" changeInput={changeInput} nameField="email" />
                 </div>
                 <div style={{ margin: "0 0 35px" }}>
                     <label className="font-s-12 font-w-400 line-h-18 mb-4">User role *</label>
@@ -34,11 +50,11 @@ function AddUsers() {
                     <div className="d-flex">
                         <div className='mr-16'>
                             <label className="font-s-12 font-w-400 line-h-18 mb-4">LastName (Japanese)</label>
-                            <BaseInput width="360px" />
+                            <BaseInput width="360px" changeInput={changeInput} nameField="name" />
                         </div>
                         <div >
                             <label className="font-s-12 font-w-400 line-h-18 mb-4">FirstName (Japanese)</label>
-                            <BaseInput width="360px" />
+                            <BaseInput width="360px"  />
                         </div>
                     </div>
                 </div>
@@ -46,7 +62,7 @@ function AddUsers() {
                     <div className="d-flex">
                         <div className='mr-16'>
                             <label className="font-s-12 font-w-400 line-h-18 mb-4">LastName (English)</label>
-                            <BaseInput width="360px" />
+                            <BaseInput width="360px" changeInput={changeInput} nameField="username" />
                         </div>
                         <div>
                             <label className="font-s-12 font-w-400 line-h-18 mb-4">FirstName (English)</label>
@@ -89,4 +105,4 @@ function AddUsers() {
     );
 };
 
-export default AddUsers;
+export default AddUser;

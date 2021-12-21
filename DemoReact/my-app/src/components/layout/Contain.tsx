@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import '../../css/layout/Contain.css';
-import AddUsers from './pages/AddUser';
-import UserManagement from './pages/UserManagement';
+import AddUser from '../pages/AddUser';
+import UserManagement from '../pages/UserManagement';
 
 
 function Contain() {
+    const [newUserData, setNewUserData] = useState({});
+
+    const newUser = (userData: any) => {
+        setNewUserData(userData);
+    }
+    
     return (
         <div className="width-f height-f">
             <div className="contain-wrapper">
@@ -15,8 +21,8 @@ function Contain() {
                 </div>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/users" element={<UserManagement />} />
-                        <Route path="/users/add" element={<AddUsers />} />
+                        <Route path="/users" element={<UserManagement newUser={newUserData} />} />
+                        <Route path="/users/add" element={<AddUser newUser={newUser} />} />
                     </Routes>
                 </BrowserRouter>
             </div>

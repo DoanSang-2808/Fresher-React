@@ -1,19 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import '../../../css/pages/UserManagement.css';
-import BaseInput from '../../base/BaseInput';
-import BaseButton from '../../base/BaseButton';
-import TableUserList from '../../TableUserList';
+import '../../css/pages/UserManagement.css';
+import BaseInput from '../base/BaseInput';
+import BaseButton from '../base/BaseButton';
+import TableUserList from '../TableUserList';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
-function UserManagement() {
+function UserManagement(props : any) {
     const [users, setUsers] = useState<Array<any>>([]);
     const [value, setValue] = useState<String>("");
+    const [record, setRecord] = useState({})
+    const history = useNavigate();
     useEffect(() => {
         getUsers();
-
     }, []);
+
+    useEffect(() => {
+        console.log(props.newUser);
+        // setUsers(users.push(`{hi: "Sang"}`))
+        setRecord(props.newUser);
+    }, [props.newUser]);
 
     const getUsers = () => {
         axios.get(`https://jsonplaceholder.typicode.com/users`)
@@ -25,6 +32,9 @@ function UserManagement() {
     const changeInput = (inputData: any) => {
         setValue(inputData);
     }
+    const addUser = () => {
+        history('/users/add');
+    }
 
     return (
         <div className="list-user">
@@ -33,11 +43,11 @@ function UserManagement() {
                 <div className="d-flex align-center justify-between mb-24">
                     <BaseInput width="400px" nameIcon="fas fa-search ml-8" inputPlaceholder="Search by email" changeInput={changeInput} />
                     <div className="d-flex">
-                        <Link to="/users/add" className="text-d-none"><BaseButton nameIcon="fas fa-user-plus color-white" nameBtn="Add user" width="160px" background="#00338D" color="#fff" /></Link>
+                        <BaseButton nameIcon="fas fa-user-plus color-white" nameBtn="Add user" width="160px" background="#00338D" color="#fff" btnOnClick={addUser}/>
                         <BaseButton nameIcon="fas fa-upload color-white" nameBtn="Upload user list (CSV)" width="160px" background="#00338D" color="#fff" />
                     </div>
                 </div>
-                <TableUserList listUser={users} keySearch={value} />
+                <TableUserList listUser={users} keySearch={value} record={record} />
                 <div className="paging-wrapper">
                     <p className="ma-0 font-s-12 font-w-400 line-h-18 ">Rows per page</p>
                     <div className="option-record ml-8 d-flex align-center justify-between height-f">

@@ -10,19 +10,19 @@ function TableUserList(props: any) {
     const [email, setEmail] = useState({});
     const [phone, setPhone] = useState({});
     const [website, setWebsite] = useState({})
-    
+
     const keySearch = props.keySearch;
     //debugger;
-    
+
     useEffect(() => {
         setUsers([...props.listUser]);
         setSort(0)
-    },[props.listUser]);  
+    }, [props.listUser]);
 
     useEffect(() => {
         search();
-    },[keySearch]); 
-    
+    }, [keySearch]);
+
     const changeSort = (nameColumn: any) => {
         setSort((sort + 1) % 3)
         sortTable(nameColumn);
@@ -158,7 +158,7 @@ function TableUserList(props: any) {
         }
     }
 
-    const sortTable = (nameColumn : any) => {
+    const sortTable = (nameColumn: any) => {
         switch (nameColumn) {
             case "name":
                 switch (sort) {
@@ -183,7 +183,7 @@ function TableUserList(props: any) {
                         users.sort(usernameAZ);
                         break;
                     case 1:
-                        setUsername({ opacity: "1", transform: 'rotate(180deg)'});
+                        setUsername({ opacity: "1", transform: 'rotate(180deg)' });
                         users.sort(usernameZA)
                         break;
                     default:
@@ -199,7 +199,7 @@ function TableUserList(props: any) {
                         users.sort(emailAZ);
                         break;
                     case 1:
-                        setEmail({ opacity: "1", transform: 'rotate(180deg)'});
+                        setEmail({ opacity: "1", transform: 'rotate(180deg)' });
                         users.sort(emailZA)
                         break;
                     default:
@@ -282,6 +282,14 @@ function TableUserList(props: any) {
                     </div>
                 </th>
                 <tbody>
+                    {Object.keys(props.record).length !== 0 ? <tr>
+                        <td className="pl-16">{props.record.name}</td>
+                        <td className="pl-16">{props.record.username}</td>
+                        <td className="pl-16">{props.record.email}</td>
+                        <td className="pl-16">{props.record.phone}</td>
+                        <td className="pl-16">{props.record.website}</td>
+                        <td><i className="btn-edit fas fa-pencil-alt pl-16 font-s-18 color-primary"></i></td>
+                    </tr> : null}
 
                     {users.map((item: any) => {
                         return <tr key={item.id}>
@@ -295,7 +303,6 @@ function TableUserList(props: any) {
                     })}
                 </tbody>
             </table>
-
         </div>
     );
 };

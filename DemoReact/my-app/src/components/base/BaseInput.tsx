@@ -7,7 +7,7 @@ function BaseInput(props : any) {
         setStyle({width: `${props.width}`})
     }, [props])
     const changeInput = (event : any) => {
-        props.changeInput(event.target.value);
+        props.changeInput(event.target.value, props.nameField);
     }
     return (
        <div className="input-wrapper" style={style}>
